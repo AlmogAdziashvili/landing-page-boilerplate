@@ -10,7 +10,7 @@ a:hover{
 }
 
 header{
-    background: linear-gradient(rgba(100,100,100,0.45), rgba(20,20,20,0.45)), url(./bg.jpg);
+    background: url(./bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,21 +95,4 @@ a.hover-twitter:active{
     font-weight: 700;
     font-size: 240%;
     color: #fEf8bA !important;
-}
-
-.color-light {
-    color: #eee;
-}
-
-.profile{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-.tpic {
-    display: block;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
 }

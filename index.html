@@ -1,4 +1,15 @@
-﻿
+﻿<?php 
+if(isset($_POST['submit'])){
+  $to = "kiduminsta@gmail.com";
+  $subject = "I&D-Digital-Phone";
+  $message = 'name: ' . $_POST['fullName'] . '\nphone: ' . $_POST['phone'];
+  $headers = 'From: 000webhost@iddigital.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+  mail($to, $subject, $message, $headers);
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,12 +27,13 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!--Style Sheet-->
   <link rel="stylesheet" href="./style.css">
-  <title>משה כהן · מאמן אישי</title>
+  <link rel="icon" type="image/png" href="IDDIGITAL_LOGO.png" />
+  <title>I&D Digital · קידום עסקים</title>
 </head>
 
 <body dir="rtl">
-  <nav class="bg-dark sticky-top navbar navbar-expand-md navbar-dark">
-    <span class="navbar-brand mb-0 ml-2">משה כהן · מאמן אישי</span>
+  <nav class="bg-white sticky-top navbar navbar-expand-md navbar-light">
+    <span class="navbar-brand mb-0 ml-2"><img src="IDDIGITAL_LOGO.PNG" style="width: 50px;"></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,21 +44,21 @@
           <a class="nav-link js--nav-home text-center" href="#">בית</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js--nav-features text-center" href="#d2">על עצמי</a>
+          <a class="nav-link js--nav-features text-center" href="#d2">איך עושים את זה?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js--nav-team text-center" href="#d4">לקוחות מרוצים</a>
+          <a class="nav-link js--nav-team text-center" href="#d4">חבילות</a>
         </li>
       </ul>
       <button class="btn btn-outline-danger my-2 my-sm-0 mr-auto js--nav-contact" type="submit">צור קשר</button>
     </div>
   </nav>
   <header class="container-fluid">
-    <div class="container mb-5 py-5 text-right">
-      <h1 class="display-3 color-light">מאמן אישי</h1>
-      <p class="lead color-light">רוצה את הגוף שתמיד חלמת עליו? הגעת למקום הנכון!</p>
+    <div class="container my-5 py-5 text-right">
+      <h1 class="display-3">I&D Digital</h1>
+      <p class="lead">קידום עסקים ממוקד ברשתות החברתיות - הופכים את העסק שלך לסיפור הצלחה!</p>
       <button class="btn btn-danger ml-3 js--nav-contact" type="submit">צור קשר</button>
-      <button class="btn btn-outline-danger js--nav-team" type="submit">לקוחות מרוצים</button>
+      <button class="btn btn-outline-danger js--nav-team" type="submit">חבילות</button>
     </div>
     <div class="text-center py-5">
       <a class="fas fa-chevron-down text-danger fs-150 js--nav-features" data-toggle="tooltip" data-placement="top"
@@ -55,36 +67,102 @@
   </header>
   <div id="d2" class="js--features text-center py-5">
     <div class="container my-5">
-      <h1 class="display-4">על עצמי</h1>
-      <img src="./lifestyle-wellness-coaching-trainer.jpg" class="profile my-2">
-      <p class="lead mb-4">שמי משה כהן - בן 26 מחולון<br />
-        מאמן אישי מאזור המרכז בעל ניסיון של מעל 4 שנים באימון לקוחות ומעל 20 לקוחות קבועים!<br />
-      בעל הסמכות מקצועיות וידע רחב באימון כאשר כל אדם מבל יחס מקצועי ואישי עם הקשבה להתייעצות גם לאחר שעות האימון.</p>
-      
+      <h1 class="display-4"><span class="text-danger">איך</span> אנחנו עושים את זה?</h1>
+      <p class="lead mb-4">כדי להבין מה הוא קידום אורגני באינסטגרם צריך קודם כל להבין מה הופך עמוד עסקי למצליח.<br />
+        עמוד מצליח דורש השקעה רבה ופעילות גבוהה וממוקדת, מה שדורש זמן רב מול המסך.<br />
+        פה אנחנו נכנסים לתמונה, I&D digital עובדת עם מערכות מתקדמות שעובדות 24 שעות ביממה<br />
+        ומייצרות עבורכם את האינטראקציה שאתם צריכים עם הלקוחות וקהל היעד הפוטנציאלי שלכם.<br />
+        המערכות שלנו יודעות למצוא את קהל היעד הרלוונטי ולהתאים אותו לדרישות שלכם.<br />
+        לאחר מכן במערכות מתחילה לייצר את כל הפעילויות הטבעיות של אינסטגרם<br />
+        (עוקבים, לייקים, צפיות וכו') בכמות גבוהה ובאופן ממוקד לקהל היעד שאתם בחרתם.<br />
+        כך אותם חשבונות פונציאליים נחשפים אליכם בצורה טבעית ומגדילים את מעגל<br />
+        הלקוחות שלכם ועל הדרך גם את כמות החשיפה, העוקבים והלייקים בעמוד שלכם.<br /></p>
+      <div class="row">
+        <div class="col-md-3 pt-4">
+          <i class="fas fa-chart-pie rounded-circle border-2-danger fs-150 p-3"></i>
+          <p class="text-muted p-3"><span class="text-danger">פילוח שוק</span> ממוקד ומותאם אישית - אתם נותנים לנו את
+            הפרטים אנחנו מוצאים לכם את כל המשתמשים שרלוונטיים אליכם ולתחום העיסוק שלכם.</p>
+        </div>
+        <div class="col-md-3 pt-4">
+          <i class="fas fa-users rounded-circle border-2-danger fs-150 p-3"></i>
+          <p class="text-muted p-3"><span class="text-danger">עוקבים אמיתיים</span> ואיכותיים - אותם חשבונות רלוונטיים
+            שיחשפו לעמוד שלכם באמצעות הקידום.
+            יהיו אנשים שמחפשים את השירות שאתם נותנים. מה שירחיב את מעגל הלקוחות שלכם.
+          </p>
+        </div>
+        <div class="col-md-3 pt-4">
+          <i class="fas fa-clock rounded-circle border-2-danger fs-150 p-3"></i>
+          <p class="text-muted p-3"><span class="text-danger">פעילות ללא הפסקה</span> - המערכת שלנו עובדת 24 שעות ביממה
+            7 ימים בשבוע, מה שיביא לתוצאות ללא פשרות ויביא את עמודכם אל קדמת הבמה.</p>
+        </div>
+        <div class="col-md-3 pt-4">
+          <i class="fas fa-phone rounded-circle border-2-danger fs-150 p-3"></i>
+          <p class="text-muted p-3"><span class="text-danger">מענה מקצועי ומהיר</span> -
+            שירות לקוחות זמין בכל שעות היום לכל שאלה, בעיה או בקשה.</p>
+        </div>
+      </div>
+      <button class="btn btn-outline-danger js--nav-contact" type="submit">לפרטים נוספים</button>
     </div>
   </div>
-  <div id="d3" class="py-5 text-center bg-dark js--team">
+  <div id="d3" class="py-5 text-center bg-danger js--team">
     <div class="container my-5">
-      <h1 class="display-4 text-light mb-5">לקוחות מרוצים</h1>
+      <h1 class="display-4 text-light mb-5">חבילות</h1>
       <div class="row text-center">
-        <div class="col-md-4 ">
-          <img src="./t1.png" class="tpic">
+        <div class="col-md-1">
         </div>
-        <div class="col-md-4 ">
-            <img src="./t3.png" class="tpic">
+        <div class="col-md-3 pack p-4 m-2 mr-0">
+          <h2 class="text-light mb-2 berk-font-gold">Business Gold</h2>
+          <h4 class="text-light">Instagram</h4>
+          <ul class="list-group list-group-flush p-0 mb-5">
+            <li class="list-group-item">קידום אורגני בעמוד האינסטגרם</li>
+            <li class="list-group-item">פילוח שוק ממוקד ומותאם אישית</li>
+            <li class="list-group-item">תמיכה מלאה מצוות הקידום</li>
+            <li class="list-group-item">פרטיות ואבטחה</li>
+          </ul>
+          <div class="pack-footer pl-5">
+            <button class="btn btn-outline-light mb-4 js--nav-contact" type="submit">התחל עכשיו!</button>
           </div>
-        
-          <div class="col-md-4 ">
-              <img src="./t2.png" class="tpic">
-            </div>
+        </div>
+        <div class="col-md-3 pack p-4 m-2 ml-0">
+          <h2 class="text-light mb-2 berk-font-gold">Business Gold</h2>
+          <h4 class="text-light">Google & Landing Page</h4>
+          <ul class="list-group list-group-flush p-0 mb-5">
+            <li class="list-group-item">בניית דף נחיתה עסקי</li>
+            <li class="list-group-item">קידום דף הנחיתה</li>
+            <li class="list-group-item">תחזוק שוטף של האתר</li>
+            <li class="list-group-item">תמיכה מלאה מצוות הקידום</li>
+            <li class="list-group-item">דומיין חינם!</li>
+            <li class="list-group-item">פרטיות ואבטחה</li>
+          </ul>
+          <div class="pack-footer pl-5">
+            <button class="btn btn-outline-light mb-4 js--nav-contact" type="submit">התחל עכשיו!</button>
+          </div>
+        </div>
+        <div class="col-md-4 pack p-4 m-2">
+          <h2 class="text-light mb-2 berk-font-plat">Business Platinum</h2>
+          <h4 class="text-light">Premium Package</h4>
+          <ul class="list-group list-group-flush p-0">
+            <li class="list-group-item">קידום אורגני בעמוד האינסטגרם</li>
+            <li class="list-group-item">בניית דף נחיתה עסקי וקידומו</li>
+            <li class="list-group-item">פילוח שוק ממוקד ומותאם אישית</li>
+            <li class="list-group-item">תחזוק שוטף של האתר</li>
+            <li class="list-group-item">דומיין חינם!</li>
+            <li class="list-group-item">תמיכה מלאה מצוות הקידום</li>
+            <li class="list-group-item">פרטיות ואבטחה</li>
+            <li class="list-group-item">הנחה למצטרפים באפריל!</li>
+          </ul>
+          <button class="btn btn-outline-light js--nav-contact mt-3" type="submit">התחל עכשיו!</button>
+        </div>
+        <div class="col-md-1">
+        </div>
       </div>
     </div>
   </div>
   <div id="d4" class="text-center py-5 js--contact">
     <div class="container my-5">
       <h1 class="display-4">צור קשר!</h1>
-      <p class="lead">התעניינתם? השאירו את הפרטים ונחזור אליכם!</p>
-      <form class="text-left form-row mt-4" name="emailForm" method="POST">
+      <p class="lead">התעניינתם? השאירו את הפרטים ונציג שלנו יחזור אליכם!</p>
+      <form class="text-left form-row mt-4" action="mail.php" name="emailForm" method="POST">
         <div class="col-md-4"></div>
         <div class="col-md-4 border p-3 rounded text-right">
           <label for="validationCustom01" class="mb-0">שם מלא</label>
@@ -97,7 +175,7 @@
       </form>
     </div>
   </div>
-  <footer class="bg-dark">
+  <footer class="bg-danger">
     <div class="container py-3 text-center">
       <div class="row">
         <div class="col-md-4"></div>
